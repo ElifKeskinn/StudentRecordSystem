@@ -1,0 +1,207 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 5px 8px;
+    text-transform: uppercase;
+  }
+}
+
+.studentTable > * {
+  display: grid;
+  grid-template-columns: 15% 15% 30% 20% 20%;
+}
+
+.studentTableTitles {
+  font-weight: bold;
+  border-bottom: 4px solid lightslategray;
+  li {
+    padding: 10px;
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.studentTableCol {
+  padding: 10px;
+
+  &:last-child {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 6px 8px;
+    font-weight: bold;
+    border: 0;
+    text-decoration: underline;
+    cursor: pointer;    
+  }
+
+  input {
+    width: 100%;
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+
+.studentTable form:nth-child(odd) {
+  background-color: aliceblue;
+}
+
+.delBtn {
+  color: red;
+}
+
+.saveBtn {
+  color: green;
+}
+
+.yeniBtn{
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: black;
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  transition: background-color 0.3s ease;
+  
+}
+
+.yeniBtn:hover{
+  background-color: #c9c9c9;
+  color: #000;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: modalFadeIn 0.3s ease-in-out;
+}
+
+.modalContent h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.modalContent form div {
+  margin-bottom: 15px;
+}
+
+.modalContent label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.modalContent input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+
+.modalContent button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modalContent button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+}
+
+.modalContent button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.modalContent button[type="button"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modalContent button[type="button"]:hover {
+  background-color: #c82333;
+}
